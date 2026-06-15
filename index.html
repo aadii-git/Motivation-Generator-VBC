@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Motivation Generator — Get inspired with powerful motivational quotes at the click of a button." />
+  <title>Motivation Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Animated gradient background -->
+  <div class="bg-gradient" aria-hidden="true"></div>
+
+  <!-- Animated background blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Particle canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <main class="container" id="main-content">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark mode" title="Toggle theme">
+      <span class="theme-toggle-icon" id="theme-icon">🌙</span>
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+      <span class="header-icon" aria-hidden="true">✦</span>
+      <h1 class="header-title">Motivation Generator</h1>
+      <p class="header-subtitle">Tap the spark. Fuel your fire.</p>
+    </header>
+
+    <!-- Quote Card -->
+    <section class="card" id="quote-card" aria-live="polite">
+      <div class="card-glow" aria-hidden="true"></div>
+      <div class="card-shimmer" aria-hidden="true"></div>
+
+      <!-- Loading spinner -->
+      <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+        <div class="loader-ring"></div>
+      </div>
+
+      <blockquote class="quote-text" id="quote-text">
+        "Click the button below to receive your first dose of inspiration."
+      </blockquote>
+      <cite class="quote-author" id="quote-author">— Motivation Generator</cite>
+
+      <!-- Action buttons row inside card -->
+      <div class="card-actions" id="card-actions">
+        <button class="action-btn" id="copy-btn" type="button" aria-label="Copy quote" title="Copy to clipboard">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+          <span class="action-label">Copy</span>
+        </button>
+        <button class="action-btn" id="share-btn" type="button" aria-label="Share quote" title="Share this quote">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+          <span class="action-label">Share</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Generate Button -->
+    <button class="btn" id="generate-btn" type="button">
+      <span class="btn-spark" aria-hidden="true">⚡</span>
+      Generate Quote
+    </button>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Made with <span class="heart">♥</span> by Aadi</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
