@@ -42,4 +42,4 @@ This project was built as part of my Vibe Coding journey where AI-assisted devel
 
 ## Author
 
-Aditya
+Aditya_GenAi
