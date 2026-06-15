@@ -1,5 +1,8 @@
 # Motivation-Generator-VBC
 A modern motivation generator web application built using vibe coding techniques and AI-assisted development.
+
+Link : https://motivation-generator-421412977733.asia-southeast1.run.app/
+
 # Motivation Generator
 
 A modern responsive web application that generates motivational quotes using JavaScript.
